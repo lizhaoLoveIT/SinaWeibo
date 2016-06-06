@@ -23,7 +23,6 @@
 		A01E2C3F1D0566790015A38E /* SuperTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01E2C3B1D0566790015A38E /* SuperTabBarController.swift */; };
 		A01E2C411D0566940015A38E /* AMTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01E2C401D0566940015A38E /* AMTabBar.swift */; };
 		A01E2C431D0572E50015A38E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01E2C421D0572E50015A38E /* UIView+Extension.swift */; };
-		A01E2C451D05AA110015A38E /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01E2C441D05AA110015A38E /* Reveal.framework */; };
 		A0E1136C1D012F3B00B4F108 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E1136B1D012F3B00B4F108 /* AppDelegate.swift */; };
 		A0E113731D012F3B00B4F108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0E113721D012F3B00B4F108 /* Assets.xcassets */; };
 		A0E113811D012F3B00B4F108 /* sinaWeiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E113801D012F3B00B4F108 /* sinaWeiBoTests.swift */; };
@@ -89,7 +88,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A01E2C451D05AA110015A38E /* Reveal.framework in Frameworks */,
 				A01E2C311D053F470015A38E /* libz.1.1.3.tbd in Frameworks */,
 				E05FC1AF7006A53CDBBE4D21 /* Pods.framework in Frameworks */,
 			);
