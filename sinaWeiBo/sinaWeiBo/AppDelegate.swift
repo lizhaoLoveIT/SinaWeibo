@@ -7,15 +7,40 @@
 //
 
 import UIKit
+import QorumLogs
 
-@UIApplicationMain
+//@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    override class func initialize() {
+        setupAppearance()
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        QorumLogs.minimumLogLevelShown = 1
+//        QorumLogs.onlyShowThisFile(ViewController)
+        QorumLogs.enabled = true
+//        QL1(1) // debug
+//        QL2(2) // info
+//        QL3(3) // warning
+//        QL4(4) // error
+//        QLPlusLine()
+//        QLShortLine()
+        
+        // 1.创建 window
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        // 2.设置 window.rootVc
+        window?.rootViewController = SuperTabBarController()
+        
+        // 3.显示 window
+        window?.makeKeyAndVisible()
+        
+        // 设置全局属性
+        setupAppearance()
+        
         return true
     }
 
@@ -41,6 +66,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
 }
 
+/**
+ * 全局函数，自定义 Log
+ * swift 3  #file = __FILE__
+ *          #function = __FUNCTION__
+ *          #line = __LINE__
+ * 泛型函数，泛型可以实现调用者传递什么类型就是什么类型
+ */
+func AMLog<T>(message: T,
+              file: String = #file,
+            method: String = #function,
+            line: Int = #line ) {
+    #if AM_DEBUG
+    // 1.处理文件名称
+    let fileName = (file as NSString).pathComponents.last!
+    
+    // 2.按照指定格式数据日志 文件名称-方法名称[行号]：输出内容
+    print("\(fileName)-\(method)[\(line)]:\(message)")
+    #endif
+}
+
+
+/**
+ * 设置全局属性
+ */
+func setupAppearance() {
+    
+}

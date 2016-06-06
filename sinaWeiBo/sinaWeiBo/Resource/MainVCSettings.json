@@ -1,0 +1,22 @@
+[
+ {
+    "vcName": "HomeRootViewController",
+    "title": "首页",
+    "imageName": "tabbar_home"
+ },
+ {
+     "vcName": "MessageRootViewController",
+     "title": "消息",
+     "imageName": "tabbar_message_center"
+ },
+ {
+     "vcName": "DiscoverRootViewController",
+     "title": "广场",
+     "imageName": "tabbar_discover"
+ },
+ {
+     "vcName": "ProfileRootViewController",
+     "title": "我",
+     "imageName": "tabbar_profile"
+ }
+ ]
