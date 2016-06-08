@@ -8,28 +8,47 @@
 
 import UIKit
 
-class HomeRootViewController: SuperViewController {
-
+class HomeRootViewController: SuperTableViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        // 1.初始化游客模式
+        setupVisitorModel("visitordiscover_feed_image_house", contentText: "关注一些人, 回这里看看有没有什么惊喜", isHiddenTurnplate: false)
+        tableView.hidden = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        showOrHiddenVisitorView(tableView)
     }
-    */
+}
 
+
+
+// MARK: -
+// MARK: 登录模式
+// MARK: -
+extension HomeRootViewController {
+    
+    
+}
+
+
+// MARK: -
+// MARK: VisitorViewDelegate
+// MARK: -
+extension HomeRootViewController {
+    
+    override func visitorViewDidClickRegisterButton(visitor: VisitorView) {
+        
+        presentRegisterViewController()
+    }
+    
+    override func visitorViewDidClickLoginButton(visitor: VisitorView) {
+        
+        presentLoginViewController()
+    }
+    
 }

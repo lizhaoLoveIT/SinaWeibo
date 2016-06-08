@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SuperTabBarController: UITabBarController {
+class TabBarController: UITabBarController {
 
     /**
      * 控制器声明周期
@@ -28,7 +28,7 @@ class SuperTabBarController: UITabBarController {
 // MARK: 设置 UI
 // MARK: -
 
-extension SuperTabBarController {
+extension TabBarController {
     
     /**
      * 添加所有控制器

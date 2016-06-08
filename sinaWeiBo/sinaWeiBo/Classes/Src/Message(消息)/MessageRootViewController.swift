@@ -12,24 +12,14 @@ class MessageRootViewController: SuperViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // 1.初始化游客模式
+        setupVisitorModel("visitordiscover_image_message", contentText: "登录后，别人评论你的微博，发给你的消息，都会在这里收到通知", isHiddenTurnplate: true)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        showOrHiddenVisitorView(view)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

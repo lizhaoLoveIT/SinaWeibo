@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         // 2.设置 window.rootVc
-        window?.rootViewController = SuperTabBarController()
+        window?.rootViewController = TabBarController()
         
         // 3.显示 window
         window?.makeKeyAndVisible()
